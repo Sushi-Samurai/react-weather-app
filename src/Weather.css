@@ -26,13 +26,27 @@
   list-style: none;
 }
 
+.Weather img {
+  height: 85px;
+  width: 85px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
 .Weather .temperature {
   font-weight: bold;
   color: rgb(33, 33, 33);
+  line-height: 85px;
   font-size: 64px;
   font-weight: 400;
 }
 
-.Weather .clearfix {
-  overflow: auto;
+.Weather .unit {
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -32px;
+  margin-left: 5px;
 }

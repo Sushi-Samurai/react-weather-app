@@ -29,7 +29,7 @@ export default function Weather() {
         <li>Wednesday 21:45</li>
         <li>Clear Sky</li>
       </ul>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
           <div className="d-flex">
             <img
