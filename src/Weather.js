@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import "./Weather.css";
+import "./WeatherForecast.css";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Weather(props) {
@@ -14,6 +16,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
@@ -64,6 +67,7 @@ export default function Weather(props) {
         </form>
 
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
